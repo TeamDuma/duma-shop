@@ -8,6 +8,7 @@
   "scripts": {
     "dev:rest": "next dev -p 3003",
     "build:rest": "next build",
+    "build": "next build",
     "dev:gql": "yarn codegen && next dev -p 3001",
     "build:gql": "yarn codegen && next build",
     "start": "next start",
