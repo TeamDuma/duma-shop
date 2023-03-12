@@ -30,7 +30,7 @@ const nextConfig = {
         use: [options.defaultLoaders.babel, { loader: 'graphql-let/loader' }],
       });
 
-      config.module.rules.push({
+      config.module.rules.push({  
         test: /\.ya?ml$/,
         type: 'json',
         use: 'yaml-loader',
