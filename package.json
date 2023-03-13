@@ -2,9 +2,6 @@
   "name": "@pick-bazar/shop",
   "version": "9.0.0",
   "private": true,
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "dev:rest": "next dev -p 3003",
     "build:rest": "next build",
