@@ -33,6 +33,7 @@ import { useInWishlist, useToggleWishlist } from '@/framework/wishlist';
 import { useIntersection } from 'react-use';
 import { StarIcon } from '@/components/icons/star-icon';
 import Button from '@/components/ui/button';
+import CountdownTimer from '@/components/countdown/counter';
 
 function FavoriteButton({
   productId,
@@ -169,6 +170,13 @@ const Details: React.FC<Props> = ({
     });
   };
 
+  const startTime = new Date('2023-03-13T08:00:00');
+  const endTime = new Date('2023-03-18T12:30:00');
+
+  const handleTimerComplete = () => {
+    console.log('Timer completed!');
+  };
+
   const hasVariations = !isEmpty(variations);
   const previewImages = displayImage(selectedVariation?.image, gallery, image);
 
@@ -272,8 +280,17 @@ const Details: React.FC<Props> = ({
                 )}
               </span>
             )}
+             <Button
+                className="border-orange-400 text-orange-400 hover:border-orange-400 hover:bg-white hover:text-orange-400 "
+                variant="outline"
+              >
+          <CountdownTimer startTime={startTime} endTime={endTime} onTimerComplete={handleTimerComplete} />
+              </Button>
+
 
             <div>
+           
+
               <Button
                 className="border-orange-400 text-orange-400 hover:border-orange-400 hover:bg-white hover:text-orange-400 "
                 variant="outline"
