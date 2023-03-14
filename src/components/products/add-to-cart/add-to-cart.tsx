@@ -3,6 +3,7 @@ import AddToCartBtn from '@/components/products/add-to-cart/add-to-cart-btn';
 import { cartAnimation } from '@/lib/cart-animation';
 import { useCart } from '@/store/quick-cart/cart.context';
 import { generateCartItem } from '@/store/quick-cart/generate-cart-item';
+import { toast } from 'react-toastify';
 
 interface Props {
   data: any;
@@ -47,6 +48,9 @@ export const AddToCart = ({
   const handleAddClick = (
     e: React.MouseEvent<HTMLButtonElement | MouseEvent>
   ) => {
+    toast.success('Item added successfully!', { 
+      position: toast.POSITION.BOTTOM_RIGHT 
+    });
     e.stopPropagation();
     // Check language and update
     if (item?.language !== language){
