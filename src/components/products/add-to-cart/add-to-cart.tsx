@@ -49,7 +49,7 @@ export const AddToCart = ({
     e: React.MouseEvent<HTMLButtonElement | MouseEvent>
   ) => {
     toast.success('Item added successfully!', { 
-      position: toast.POSITION.BOTTOM_CENTER 
+      position: toast.POSITION.BOTTOM_RIGHT 
     });
     e.stopPropagation();
     // Check language and update
