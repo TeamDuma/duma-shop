@@ -40,7 +40,7 @@ const CountdownTimer: React.FC<CountdownProps> = ({
       .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  return <div>{formatTime(timeLeft)}</div>;
+  return <div style={{ marginLeft:'5px'}}>{formatTime(timeLeft)}</div>;
 };
 
 export default CountdownTimer;

@@ -280,12 +280,12 @@ const Details: React.FC<Props> = ({
                 )}
               </span>
             )}
-             <Button
-                className="border-orange-400 text-orange-400 hover:border-orange-400 hover:bg-white hover:text-orange-400 "
+             {/* <Button
+                className="border-orange-400 text-orange-400 hover:border-orange-400 hover:bg-white hover:text-orange-400 mb-8 "
                 variant="outline"
               >
           <CountdownTimer startTime={startTime} endTime={endTime} onTimerComplete={handleTimerComplete} />
-              </Button>
+              </Button> */}
 
 
             <div>
@@ -295,7 +295,8 @@ const Details: React.FC<Props> = ({
                 className="border-orange-400 text-orange-400 hover:border-orange-400 hover:bg-white hover:text-orange-400 "
                 variant="outline"
               >
-                50% OFF ends in 5 days
+                Available for  <CountdownTimer startTime={startTime} endTime={endTime} onTimerComplete={handleTimerComplete} />
+
               </Button>
             </div>
 
