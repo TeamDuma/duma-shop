@@ -48,9 +48,13 @@ export const AddToCart = ({
   const handleAddClick = (
     e: React.MouseEvent<HTMLButtonElement | MouseEvent>
   ) => {
+
     toast.success('Item added successfully!', { 
-      position: toast.POSITION.TOP_RIGHT 
-    });
+      position: toast.POSITION.TOP_RIGHT ,
+      hideProgressBar: true,
+    }
+    );
+
     e.stopPropagation();
     // Check language and update
     if (item?.language !== language){
