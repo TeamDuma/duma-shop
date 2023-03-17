@@ -25,7 +25,7 @@ const ShopCarousel: React.FC<Props> = ({ shops }) => {
       spaceBetween={5}
       slidesPerView={4}
       navigation
-      pagination={{ clickable: true }}
+      // pagination={{ clickable: true }}
     >
       {shops.map((shop) => (
         <SwiperSlide key={shop.id}>
