@@ -181,17 +181,16 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           We Care
         </h1>
       </header>
-
-      <WeCare
-        imageUrl={
-          'https://res.cloudinary.com/dhmljeapc/image/upload/v1678376990/samples/Duma%20Website/Mask_group_ant7t0.png'
-        }
-        text1={'Did you know?1'}
-        text2={'Did you know?2'}
-        text3={'Did you know?3'}
-        text4={'Did you know4?'}
-        text5={'Did you know5?'}
-      ></WeCare>
+      <div
+        style={{
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+        }}
+      >
+        <WeCare />
+      </div>
     </>
   );
 }

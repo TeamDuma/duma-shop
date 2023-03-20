@@ -1,41 +1,46 @@
 import React from 'react';
+import { ChildEating, GlobeLeaf, HandLeaf, RecycleIcon } from '../icons';
+import CartCheckBag from '../icons/cart-check-bag';
+import InfoCard from './info-card';
+import styles from './styles.module.css';
 
-interface Props {
-  imageUrl: string;
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
-  text5: string;
-}
-
-const WeCare: React.FC<Props> = ({
-  imageUrl,
-  text1,
-  text2,
-  text3,
-  text4,
-  text5,
-}) => {
+const WeCare = () => {
   return (
-    <div className="image-with-text-container">
-      <img src={imageUrl} alt="" className="image-with-text-image" />
-      <div className="image-with-text-text-container">
-        <div className="image-with-text-text image-with-text-text-1">
-          {text1}
+    <div className="w-3/5  lg:flex lg:justify-around">
+      <div className="left-item lg:h-92 flex flex-col justify-between ">
+        <InfoCard
+          icon={<GlobeLeaf />}
+          title="Did you know?"
+          description="The annual economic loss due to food waste in Ghana alone is 65 Million US Dollars "
+        />
+        <InfoCard
+          icon={<RecycleIcon />}
+          title="Did you know?"
+          description="Women spend more than 90 hours annually shopping for their families. We want to save you that time."
+        />
+      </div>
+
+      <div className="middle-item flex flex-col items-center justify-between lg:mt-40 lg:h-96">
+        <div>
+          <img
+            src="https://res.cloudinary.com/dhmljeapc/image/upload/v1679309702/Duma/zerowaste_lrzq0w.png"
+            alt=""
+            width="200"
+            className="hidden lg:block"
+          />
         </div>
-        <div className="image-with-text-text image-with-text-text-2">
-          {text2}
-        </div>
-        <div className="image-with-text-text image-with-text-text-3">
-          {text3}
-        </div>
-        <div className="image-with-text-text image-with-text-text-4">
-          {text4}
-        </div>
-        <div className="image-with-text-text image-with-text-text-5">
-          {text5}
-        </div>
+      </div>
+      <div className="right-item lg:h-92 flex flex-col justify-between">
+        <InfoCard
+          icon={<HandLeaf />}
+          title="Did you know?"
+          description="50% of Ghana’s population experiences food insecurity. We are on a mission to curb wastage."
+        />
+        <InfoCard
+          icon={<ChildEating />}
+          title="Did you know?"
+          description="The United Nations Sustainable Development Goal (SDG) No.12 aims to Ensure sustainable consumption and production patterns "
+        />
       </div>
     </div>
   );
