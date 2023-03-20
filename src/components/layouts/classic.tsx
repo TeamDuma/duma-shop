@@ -50,38 +50,56 @@ export default function ClassicLayout({ variables }: HomePageProps) {
   const reviews = [
     {
       id: 1,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'John Doe',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      text: 'I bought for the first time short time ago. I love it ',
+      time: '3 days',
       rating: 4,
     },
     {
       id: 2,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'Jane Smith',
-      text: 'Pellentesque euismod ipsum id odio ultricies, a malesuada lorem pharetra.',
+      text: 'It is user friendly, quick and brought me a 30% discount on what I bought.',
+      time: '15 days',
       rating: 5,
     },
     {
       id: 3,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'Bob Johnson',
-      text: 'Sed auctor sapien non diam semper, non ornare nulla varius.',
+      text: 'The quality and savings that that I received is Impressive.',
+      time: '2 days',
       rating: 3,
     },
     {
       id: 4,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'Bob Johnson',
-      text: 'Sed auctor sapien non diam semper, non ornare nulla varius.',
+      text: 'saves you money and contributes to improving the food industry by reducing the amount of food waste.',
+      time: '10 days',
       rating: 3,
     },
     {
       id: 5,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'Bob Johnson',
-      text: 'Sed auctor sapien non diam semper, non ornare nulla varius.',
+      text: 'I bought for the first time short time ago. I love it ',
+      time: '7 days',
       rating: 3,
     },
     {
       id: 6,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679304689/Group_12_zlejtf.png',
       author: 'Bob Johnson',
-      text: 'Sed auctor sapien non diam semper, non ornare nulla varius.',
+      text: 'It is user friendly, quick and brought me a 30% discount on what I bought.',
+      time: '10 days',
       rating: 3,
     },
   ];
@@ -109,7 +127,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
       </Element>
 
       <div className="lg:px-22">
-        <header className="mb-8 text-center">
+        <header className="mb-8  text-center">
           <h1 className="text-xl font-bold md:text-2xl xl:text-3xl">
             How it works
           </h1>
@@ -129,7 +147,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           />
           <HowItWorksCards
             leftImg
-            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1678376990/samples/Duma%20Website/Mask_group_ant7t0.png"
+            imgUrl="https://res.cloudinary.com/ddtoofsjj/image/upload/v1679308091/Mask_group_k5y5jh.png"
             imgWidth={271.9}
             imgHeight={250}
             stepText="Step 2"
@@ -140,7 +158,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           />
           <HowItWorksCards
             rightImg
-            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1678376990/samples/Duma%20Website/Mask_group_ant7t0.png"
+            imgUrl="https://res.cloudinary.com/ddtoofsjj/image/upload/v1679308223/Mask_group_1_mbo7c6.png"
             imgWidth={271.9}
             imgHeight={250}
             stepText="Step 3"
