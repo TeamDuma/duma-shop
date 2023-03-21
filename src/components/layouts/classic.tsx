@@ -12,6 +12,9 @@ import shop from '../ui/cards/shop';
 import ReviewsCarousel from '../landing/reviews';
 import reviews from '../landing/reviews';
 import ShopCarousel from '../landing/shops';
+import { FlashIcon, GlobeLeaf } from '../icons';
+import { ChevronRight } from '../icons/chevron-right';
+import CountdownTimer from '@/components/countdown/counter';
 
 export default function ClassicLayout({ variables }: HomePageProps) {
   const shops = [
@@ -39,6 +42,11 @@ export default function ClassicLayout({ variables }: HomePageProps) {
       id: 5,
       imageUrl:
         'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679006057/Duma/Group_505_qozuzp.png',
+    },
+    {
+      id: 6,
+      imageUrl:
+        'https://res.cloudinary.com/ddtoofsjj/image/upload/v1679006057/Duma/Group_503_pc4vje.png',
     },
     {
       id: 6,
@@ -85,18 +93,41 @@ export default function ClassicLayout({ variables }: HomePageProps) {
       rating: 3,
     },
   ];
+  const startTime = new Date('2023-03-13T08:00:00');
+  const endTime = new Date('2023-03-18T12:30:00');
+
+  const handleTimerComplete = () => {
+    console.log('Timer completed!');
+  };
 
   return (
-    <>
+    <div>
       <Banner layout="classic" variables={variables.types} />
       {/* <PromotionSliders variables={variables.types} /> */}
       <FilterBar variables={variables.categories} />
       <header className="mb-8 text-center">
-        <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
+        <h1 className="mt-24 text-xl font-bold md:text-2xl xl:text-3xl">
           Today&apos;s Crazy Deals
         </h1>
       </header>
-
+      <div className="container flex w-full items-center justify-between rounded-xl bg-dumaorange py-2 px-4 lg:mx-12">
+        <div className="left-items flex items-center">
+          <FlashIcon />
+          <p className="ml-2 text-xl font-bold text-white">Flash Sales</p>
+        </div>
+        <div className="middle-items flex items-center self-center text-xl font-bold text-white">
+          <p className=" font-bold text-white">Time left:</p>
+          <CountdownTimer
+            startTime={startTime}
+            endTime={endTime}
+            onTimerComplete={handleTimerComplete}
+          />
+        </div>
+        <div className="right-items flex ">
+          <h1 className=" mr-3 font-bold text-white">See All</h1>
+          <ChevronRight stroke="white" strokeWidth={3} width={15} />
+        </div>
+      </div>
       <Element
         name="grid"
         className="flex border-t border-solid border-border-200 border-opacity-70"
@@ -108,7 +139,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
         />
       </Element>
 
-      <div className="lg:px-22">
+      <div className="lg:px-22 lg:mt-12">
         <header className="mb-8 text-center">
           <h1 className="text-xl font-bold md:text-2xl xl:text-3xl">
             How it works
@@ -129,8 +160,8 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           />
           <HowItWorksCards
             leftImg
-            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1678376990/samples/Duma%20Website/Mask_group_ant7t0.png"
-            imgWidth={271.9}
+            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1679391083/Duma/shopping_oj0mem.png"
+            imgWidth={234.4}
             imgHeight={250}
             stepText="Step 2"
             titleText="Verify your purchase and pay"
@@ -140,7 +171,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           />
           <HowItWorksCards
             rightImg
-            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1678376990/samples/Duma%20Website/Mask_group_ant7t0.png"
+            imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1679391083/Duma/delivery_fysu3l.png"
             imgWidth={271.9}
             imgHeight={250}
             stepText="Step 3"
@@ -148,6 +179,12 @@ export default function ClassicLayout({ variables }: HomePageProps) {
             descriptionText={` We aim to connect you to shops nearest to you, so you have the option of using our courier partner, or passing by the shop and collecting your shopping within the same day you purchase.`}
           />
         </header>
+      </div>
+      <div className="flex w-full justify-center my-10">
+        <img
+          alt="promo barner"
+          src="https://res.cloudinary.com/dhmljeapc/image/upload/v1679338832/Duma/deals_barner_bnqzsq.png"
+        />
       </div>
 
       <Element
@@ -191,6 +228,6 @@ export default function ClassicLayout({ variables }: HomePageProps) {
       >
         <WeCare />
       </div>
-    </>
+    </div>
   );
 }

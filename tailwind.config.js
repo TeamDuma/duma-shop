@@ -39,6 +39,7 @@ module.exports = {
         '10px': '0.625rem',
       },
       colors: {
+        "dumaorange":"#F58929",
         light: withOpacity('--color-light'),
         dark: withOpacity('--color-dark'),
         accent: withOpacity('--color-accent'),

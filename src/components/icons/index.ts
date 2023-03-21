@@ -5,3 +5,4 @@ export { default as GlobeLeaf } from './globe-leaf';
 export { default as RecycleIcon } from './recycle-icon';
 export { default as HandLeaf } from './hand-leaf';
 export { default as ChildEating } from './child-eating';
+export { default as FlashIcon } from './flash-icon';

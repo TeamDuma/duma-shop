@@ -1,7 +1,6 @@
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
 import { SessionProvider } from 'next-auth/react';
-import '../components/landing/styles.css';
 import '@/assets/css/main.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
