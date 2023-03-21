@@ -23,7 +23,7 @@ const ShopCarousel: React.FC<Props> = ({ shops }) => {
   return (
     <Swiper
       spaceBetween={5}
-      slidesPerView={4}
+      slidesPerView={5}
       navigation
       // pagination={{ clickable: true }}
     >

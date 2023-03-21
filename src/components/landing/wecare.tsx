@@ -1,8 +1,6 @@
 import React from 'react';
 import { ChildEating, GlobeLeaf, HandLeaf, RecycleIcon } from '../icons';
-import CartCheckBag from '../icons/cart-check-bag';
 import InfoCard from './info-card';
-import styles from './styles.module.css';
 
 const WeCare = () => {
   return (
