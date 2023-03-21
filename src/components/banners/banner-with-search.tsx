@@ -8,6 +8,7 @@ import { useHeaderSearch } from '@/layouts/headers/header-search-atom';
 import { useIntersection } from 'react-use';
 import { useEffect, useRef } from 'react';
 import Button from '@/components/ui/button';
+import { useModalAction } from '../ui/modal/modal.context';
 
 interface BannerProps {
   banners: Banner[] | undefined;
@@ -17,6 +18,8 @@ interface BannerProps {
 const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
   const { showHeaderSearch, hideHeaderSearch } = useHeaderSearch();
   const intersectionRef = useRef(null);
+  const { openModal } = useModalAction();
+
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: '0px',
@@ -95,7 +98,7 @@ const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
                       ref={intersectionRef}
                     >
                       {/* <Search label="search" /> */}
-                      <Button size="big">Shop now</Button>
+                      <Button  onClick={() => openModal('Add_TO_WISHLIST')} size="big">Shop now</Button>
                     </div>
                   </div>
                 </div>
@@ -109,3 +112,7 @@ const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
 };
 
 export default BannerWithSearch;
+function openModal(arg0: string): void {
+  throw new Error('Function not implemented.');
+}
+
