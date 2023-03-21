@@ -23,19 +23,7 @@ interface Props {
 
 const ReviewsCarousel: React.FC<Props> = ({ reviews }) => {
   return (
-    <Swiper
-      spaceBetween={10}
-      slidesPerView={3}
-      navigation
-      pagination={{
-        bulletClass:
-          'swiper-pagination-bullet !w-2.5 !h-2.5 !p-1 !rounded-full bg-gray-400 !border-0 !opacity-70 pagination ',
-        bulletActiveClass: '!w-3 !h-3 !bg-accent',
-        clickableClass: 'cursor-pointer',
-        clickable: true,
-      }}
-      // pagination={{ clickable: true }}
-    >
+    <Swiper spaceBetween={5} slidesPerView={4} navigation>
       {reviews.map((review) => (
         <SwiperSlide key={review.id}>
           <div
@@ -44,11 +32,11 @@ const ReviewsCarousel: React.FC<Props> = ({ reviews }) => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: 250,
-              backgroundColor: 'lightgray',
+              width: 300,
+              backgroundColor: '#EEEEEE',
               padding: 20,
               borderRadius: 10,
-              height: 250,
+              height: 200,
             }}
           >
             <img style={{ marginBottom: '4%' }} src={review.imageUrl} />
@@ -58,8 +46,6 @@ const ReviewsCarousel: React.FC<Props> = ({ reviews }) => {
               {review.time} ago
             </h3>
             <h3 className="mb-2 text-center">{review.author}</h3>
-
-            {/* <p className="mb-8 text-center"> {review.rating}</p> */}
           </div>
         </SwiperSlide>
       ))}

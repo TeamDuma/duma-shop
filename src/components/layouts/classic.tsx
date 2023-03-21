@@ -159,7 +159,6 @@ export default function ClassicLayout({ variables }: HomePageProps) {
 
       <div className="lg:px-22 lg:mt-12">
         <header className="mb-8 text-center">
-
           <h1 className="text-xl font-bold md:text-2xl xl:text-3xl">
             How it works
           </h1>
@@ -181,7 +180,6 @@ export default function ClassicLayout({ variables }: HomePageProps) {
             leftImg
             imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1679391083/Duma/shopping_oj0mem.png"
             imgWidth={234.4}
-
             imgHeight={250}
             stepText="Step 2"
             titleText="Verify your purchase and pay"
@@ -192,7 +190,6 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           <HowItWorksCards
             rightImg
             imgUrl="https://res.cloudinary.com/dhmljeapc/image/upload/v1679391083/Duma/delivery_fysu3l.png"
-
             imgWidth={271.9}
             imgHeight={250}
             stepText="Step 3"
@@ -201,7 +198,7 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           />
         </header>
       </div>
-      <div className="flex w-full justify-center my-10">
+      <div className="my-10 flex w-full justify-center">
         <img
           alt="promo barner"
           src="https://res.cloudinary.com/dhmljeapc/image/upload/v1679338832/Duma/deals_barner_bnqzsq.png"
@@ -220,34 +217,37 @@ export default function ClassicLayout({ variables }: HomePageProps) {
       </Element>
 
       <header className="mb-8 text-center">
-        <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
+        <h1 className="mt-20 text-xl font-bold md:text-2xl xl:text-3xl">
           Featured Shops
         </h1>
       </header>
       <ShopCarousel shops={shops} />
 
-      <header className="mb-8 text-center">
-        <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
-          What People are Saying{' '}
-        </h1>
-      </header>
+      <div className="mt-40">
+        <header className="mb-8 text-center">
+          <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
+            What People are Saying
+          </h1>
+        </header>
 
-      <ReviewsCarousel reviews={reviews} />
-
-      <header className="mb-8 text-center">
-        <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
-          We Care
-        </h1>
-      </header>
-      <div
-        style={{
-          width: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-          display: 'flex',
-        }}
-      >
-        <WeCare />
+        <ReviewsCarousel reviews={reviews} />
+      </div>
+      <div className="mt-20">
+        <header className="mb-8 text-center">
+          <h1 className="mt-8 text-xl font-bold md:text-2xl xl:text-3xl">
+            We Care
+          </h1>
+        </header>
+        <div
+          style={{
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            display: 'flex',
+          }}
+        >
+          <WeCare />
+        </div>
       </div>
     </div>
   );
