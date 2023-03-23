@@ -15,6 +15,7 @@ import ShopCarousel from '../landing/shops';
 import { FlashIcon, GlobeLeaf } from '../icons';
 import { ChevronRight } from '../icons/chevron-right';
 import CountdownTimer from '@/components/countdown/counter';
+import Button from '../ui/button';
 
 export default function ClassicLayout({ variables }: HomePageProps) {
   const shops = [
@@ -117,19 +118,36 @@ export default function ClassicLayout({ variables }: HomePageProps) {
   const handleTimerComplete = () => {
     console.log('Timer completed!');
   };
+  const fetchedImgSrc =
+    'https://res.cloudinary.com/dhmljeapc/image/upload/v1677804656/duma_hero_image_kaulzu.png';
 
   return (
     <div className="flex w-full flex-col">
-      <Banner layout="classic" variables={variables.types} />
+      {/* <Banner layout="classic" variables={variables.types} /> */}
+      <div
+        style={{
+          backgroundImage: `url(${fetchedImgSrc})`,
+        }}
+      >
+        <div style={{ position: 'absolute', top: 300, left: 60 }}>
+          <p style={{ fontSize: 50, fontWeight: 'bold' }}>
+            Shop The Best Deals!
+          </p>
+          <p style={{ width: 500, marginTop: 20, fontSize: 20 }}>
+            We select high quality products that risk being thrown away and make
+            them available for purchase.
+          </p>
+          <Button className="my-12 px-20 py-5">Shop Now</Button>
+        </div>
+      </div>
+      <img
+        src="https://res.cloudinary.com/dhmljeapc/image/upload/v1677804656/duma_hero_image_kaulzu.png"
+        alt="alt"
+      />
       {/* <PromotionSliders variables={variables.types} /> */}
       <FilterBar variables={variables.categories} />
-      <header className="mb-8 text-center">
-        <h1 className="mt-24 text-xl font-bold md:text-2xl xl:text-3xl">
-          Today&apos;s Crazy Deals
-        </h1>
-      </header>
       <div className="container flex w-full items-center justify-between self-center rounded-xl bg-dumaorange py-2 px-4">
-        <div className="left-items hidden lg:block lg:flex items-center">
+        <div className="left-items hidden items-center lg:block lg:flex">
           <FlashIcon />
           <p className="ml-2 text-xl font-bold text-white">Flash Sales</p>
         </div>
@@ -146,6 +164,12 @@ export default function ClassicLayout({ variables }: HomePageProps) {
           <ChevronRight stroke="white" strokeWidth={3} width={15} />
         </div>
       </div>
+      {/* <header className="mb-8 text-center">
+        <h1 className="mt-24 text-xl font-bold md:text-2xl xl:text-3xl">
+          Today&apos;s Crazy Deals
+        </h1>
+      </header> */}
+
       <Element
         name="grid"
         className="flex border-t border-solid border-border-200 border-opacity-70"
