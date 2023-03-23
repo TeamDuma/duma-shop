@@ -7,6 +7,8 @@ const Login = dynamic(() => import('@/components/auth/login-form'), {
   ssr: false,
 });
 const Register = dynamic(() => import('@/components/auth/register-form'));
+const AddToWisHList = dynamic(() => import('@/components/auth/add-to-wishlist'));
+
 const ForgotPassword = dynamic(
   () => import('@/components/auth/forgot-password')
 );
@@ -75,6 +77,8 @@ const ManagedModal = () => {
       {view === 'FORGOT_VIEW' && <ForgotPassword />}
       {view === 'OTP_LOGIN' && <OtpLoginView />}
       {view === 'REFUND_REQUEST' && <CreateRefundView />}
+      {view === 'Add_TO_WISHLIST' && <AddToWisHList />}
+
       {view === 'ADD_OR_UPDATE_ADDRESS' && <CreateOrUpdateAddressForm />}
       {view === 'ADD_OR_UPDATE_GUEST_ADDRESS' && (
         <CreateOrUpdateGuestAddressForm />
@@ -108,6 +112,7 @@ const ManagedModal = () => {
       {/* Card/My Card Modal */}
       {view === 'ADD_NEW_CARD' && <AddNewCardModal />}
       {view === 'DELETE_CARD_MODAL' && <DeleteCardModal />}
+      
     </Modal>
   );
 };
